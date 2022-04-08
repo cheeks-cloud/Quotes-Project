@@ -1,17 +1,18 @@
 <app-header>
 [addQuote]="Add a Quote"
 </app-header>
+<div class="container">
+    <div *ngFor="let quote of quotes; let i = index">
+      <li  appHighlight> {{quote.thequote}} submitted by {{quote.person}} 
+        <span class="text-success">
+          Upvote  {{quote.upvotes}}
+      </span>  </li>
 
-<div *ngFor="let quote of quotes; let i = index">
-  <li  appHighlight> {{quote.thequote}} submitted by {{quote.person}} 
-    <span class="text-success">
-      Upvote  {{quote.upvotes}}
-  </span>  </li>
+      <button (click)="toggleDetails(i)">Show Quote Details</button>
+      <!-- <button (onclick)="voteCount(i)">VOTE</button> -->
+      <app-quote-details *ngIf="quote.showAuthor"  ></app-quote-details>
 
-  <button (click)="toggleDetails(i)">Show Quote Details</button>
-  <!-- <button (onclick)="voteCount(i)">VOTE</button> -->
-  <app-quote-details *ngIf="quote.showAuthor"  ></app-quote-details>
-
+    </div>
 </div>
 <!-- [quote]="quote" 
 *ngIf="quote.id==highest && quote.upvotes>0";then highlight else empty 
