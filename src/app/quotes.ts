@@ -1,15 +1,19 @@
 export class Quotes {
   
    showAuthor: boolean
+   voting: boolean
 
   constructor(
+    public id:number,
     public category: string,
-    public quote: string,
+    public thequote: string,
     public author: string, 
-    public person: string
-    // public votes: number
+    public person: string,
+    public upvotes: number,
+    public downvotes: number
   ){
     this.showAuthor =false
+    this.voting=false
   }
 
 

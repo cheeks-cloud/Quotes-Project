@@ -1,8 +1,29 @@
 <p>Welcome to the Quotes World</p>
 
 <div *ngFor="let quote of quotes; let i = index">
-  <li> {{quote.category}}</li>
+  <li  appHighlight> {{quote.thequote}} submitted by {{quote.person}} 
+    <span class="text-success">
+      Upvote  {{quote.upvotes}}
+  </span>  </li>
 
-  <app-quote-details></app-quote-details>
+  <button (click)="toggleDetails(i)">Show Quote Details</button>
+  <!-- <button (onclick)="voteCount(i)">VOTE</button> -->
+  <app-quote-details *ngIf="quote.showAuthor"  ></app-quote-details>
 
 </div>
+<!-- [quote]="quote" 
+*ngIf="quote.id==highest && quote.upvotes>0";then highlight else empty 
+  for highlitig a specific part
+  <ng-template #highlight>
+    <li app-highlighy>  {{}}</li>
+  </ng-template>
+  <ng-template #empty>
+    <li app-highlighy>  {{}}</li>
+  </ng-template>
+-->
+
+
+
+
+
+

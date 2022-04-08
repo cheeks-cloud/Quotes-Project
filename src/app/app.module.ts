@@ -4,14 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent} from './Components/quote/quote.component';
-import { QuoteDetailsComponent } from './Components/quote-details/quote-details.component'
+import { QuoteDetailsComponent } from './Components/quote-details/quote-details.component';
+import { HighlightDirective } from './highlight.directive'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
