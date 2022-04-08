@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent} from './Components/quote/quote.component';
 import { QuoteDetailsComponent } from './Components/quote-details/quote-details.component';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { HeaderComponent } from './Components/header/header.component'
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HighlightDirective } from './highlight.directive'
     AppComponent,
     QuoteComponent,
     QuoteDetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
