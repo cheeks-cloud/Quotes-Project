@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Quotes} from 'src/app/quotes'
+
 
 @Component({
   selector: 'app-quote',
@@ -15,6 +16,11 @@ export class QuoteComponent implements OnInit {
     new Quotes( 5,"Inspiration Quote","You are never too old to set another goal or to dream a new dream.","Malala Yousafzai","Ken",0,0),
     new Quotes( 6,"Depression Quote","Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad.","Henry Wadsworth","Agnes",0,0),
   ];
+
+  
+
+
+
 
   constructor() { }
 

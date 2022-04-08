@@ -1,4 +1,6 @@
-<app-header></app-header>
+<app-header>
+[addQuote]="Add a Quote"
+</app-header>
 
 <div *ngFor="let quote of quotes; let i = index">
   <li  appHighlight> {{quote.thequote}} submitted by {{quote.person}} 
