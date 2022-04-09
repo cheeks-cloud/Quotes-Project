@@ -1,11 +1,19 @@
 <div class="header">
    <h1 class="text-center">Welcome to Quotes.Com</h1>
+</div>
 
+<div class="nav">
    <app-button
-    color="{{ showAddQuote ?'green':'black'  }}"
+    color="{{ showAddQuote ?'green':'grey'  }}"
     text="{{ showAddQuote ? 'Close':'Add Quote' }}"
     (btnClick)="toggleAddQuote()">
    </app-button>
+
+   <div class="col-md-6">
+     <app-quote-form>
+
+     </app-quote-form>
+   </div>
 </div>
 
 

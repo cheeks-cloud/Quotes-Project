@@ -1,3 +1,44 @@
-<form >
-  
+
+<div class="form">
+  <h2 class="text-center"> Add A New Quote</h2>
+<form #quoteform="ngForm">
+  <div class="form-group">
+    <label for="text">Quote Category</label>
+    <input type="text" name="category" placeholder="type goes here"
+    id="category"[(ngModel)]="newQuote.category" #category="ngModel" required >
+    <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+     <p>Category is required</p>
+    </div> 
+  </div>
+
+  <div class="form-group">
+    <label for="text">Quote</label>
+    <input type="text" name="quote" placeholder="quote goes here"
+    id="text" [(ngModel)]="newQuote.quote" #quote="ngModel" required >
+    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+      <p>Quote is required</p>
+     </div>  
+  </div>
+
+  <div class="form-group">
+    <label for="text">Author</label>
+    <input type="text" name="author" id="author"
+    [(ngModel)]="newQuote.author" #author="ngModel"required >
+    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+      <p>Author is required</p>
+     </div>  
+  </div>
+
+  <div class="form-group">
+    <label for="text">You Name</label>
+    <input type="text" name="person" id="person"
+    [(ngModel)]="newQuote.person" #author="ngModel"required >
+    <div [hidden]="person.valid || person.pristine" class="alert alert-danger">
+      <p>Person is required</p>
+     </div>
+     
+  </div>
+
+  <button type="submit" value="Save Quote" class="btn btn-primary"> Add Quote</button>
 </form>
+</div>
