@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -7,10 +7,12 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
- //add propery values 
 
- showAddQuote:boolean = false;
+ //add propery values 
+showAddItem:boolean = false;
+  @Input() color: string;
+   @Input() btn1 = "Add New Quote" 
+   @Output() btnPress = new EventEmitter()
 
 
 
@@ -21,13 +23,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleAddQuote(){
-    this.showAddQuote = ! this.showAddQuote;
-  }
+  // toggleAddQuote(){
+  //   this.showAddQuote = ! this.showAddQuote;
+  // }
 
 
-
-
+btnPressEvent = (str: string) => {
+  this.btnPress.emit(str);
+}
+// onclick(){
+//   this.btnClick.emit()
+// }
 
 
 }

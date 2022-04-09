@@ -8,9 +8,16 @@ import { Quotes } from 'src/app/quotes'
 })
 export class QuoteDetailsComponent implements OnInit {
  @Input() quote: Quotes;
+ @Output() isDone = new EventEmitter<boolean>()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  quoteDiscard(complete: boolean) {
+    this.isDone.emit(complete)
+
   }
 
 }

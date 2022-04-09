@@ -1,12 +1,13 @@
 <div class="header">
    <h1 class="text-center">Welcome to Quotes.Com</h1>
+
+   <button [ngStyle]="{'background-color':color}"
+   
+   (click)="btnPressEvent('btn1')"> {{btn1}}</button>
+   
 </div>
 
-<app-button
-color="{{ showAddQuote ?'green':'grey'  }}"
-text="{{ showAddQuote ? 'Close':'Add Quote' }}"
-(btnClick)="toggleAddQuote()">
-</app-button>
+
 
 
 

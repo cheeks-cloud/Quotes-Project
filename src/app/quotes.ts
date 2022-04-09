@@ -1,7 +1,7 @@
 export class Quotes {
   
-   showAuthor: boolean;  
-   voting: boolean
+   showDescription: boolean;  
+  
 
   constructor(
     public id:number,
@@ -12,8 +12,8 @@ export class Quotes {
     public upvotes: number,
     public downvotes: number
   ){
-    this.showAuthor =false
-    this.voting=false
+    this.showDescription =false
+  
   }
 
 

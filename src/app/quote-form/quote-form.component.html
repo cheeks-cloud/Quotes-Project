@@ -35,10 +35,12 @@
     [(ngModel)]="newQuote.person" #person="ngModel"required >
     <div [hidden]="person.valid || person.pristine" class="alert alert-danger">
       <p>Person is required</p>
-     </div>
-     
+     </div> 
   </div>
 
   <button type="submit" value="Save Quote" class="btn btn-primary"> Add Quote</button>
+  <button class="btn btn-danger"(click)="clearBtn()" >Clear</button>
+
 </form>
 </div>
+<!-- (onclick) ='remove(true)' -->

@@ -16,26 +16,48 @@ export class QuoteComponent implements OnInit {
     new Quotes( 5,"Inspiration Quote","You are never too old to set another goal or to dream a new dream.","Malala Yousafzai","Ken",0,0),
     new Quotes( 6,"Depression Quote","Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad.","Henry Wadsworth","Agnes",0,0),
   ];
+   
 
+   showAddItem = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  headerBtnClick(str: string){
+    console.log(str)
+    if(str==='btn1'){
+      this.showAddItem = !this.showAddItem;
+      return;
+    }
+  
+  }
 
   //function to toggle quote detail
   toggleDetails( index: number){
-    this.quotes[index].showAuthor = !this.quotes[index].showAuthor
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
 
   }
   //function to add a NEW quote
 
  addNewQuote(quote){
    let quoteLength = this.quotes.length;
-   quote.id = quoteLength + 1
+   quote.id = quoteLength+ 1
    this.quotes.push(quote)
 
  }
+
+ //to delete quote
+deleteQuote(isDone,index){
+  if(isDone){
+    let toDelete = confirm(`Are you sure you want to delete${this.quotes[index].thequote}?`)
+  
+    if(isDone){
+      this.quotes.splice(index, 1)
+    }
+  
+  }
+}
 
 
 

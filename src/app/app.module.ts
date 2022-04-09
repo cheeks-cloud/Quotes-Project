@@ -9,7 +9,6 @@ import { QuoteDetailsComponent } from './Components/quote-details/quote-details.
 import { HighlightDirective } from './highlight.directive';
 import { HeaderComponent } from './Components/header/header.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { ButtonComponent } from './Components/button/button.component';
 
 
 
@@ -21,7 +20,7 @@ import { ButtonComponent } from './Components/button/button.component';
     HighlightDirective,
     HeaderComponent,
     QuoteFormComponent,
-    ButtonComponent
+  
   
   ],
   imports: [

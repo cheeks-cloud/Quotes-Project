@@ -1,32 +1,30 @@
- <app-header>
+ <app-header [btn1]="'Add New Quote'"
+ (btnPress)="headerBtnClick($event)" 
+ color="{{ showAddItem ?'green':'grey'  }}">
 
 </app-header> 
 
-<div class="nav">
-  <div class="col-md-6">
-    <app-quote-form (addQuote)="addNewQuote($event)" >
+<div class="nav" *ngIf = "showAddItem">
+  <div class="col-md-6" style="width: 80%;">
+    <app-quote-form (addQuote)="addNewQuote($event)"
+   >
 
     </app-quote-form>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
+<!-- (clearQuote)="clickClear()" -->
 <div class="container">
     <div *ngFor="let quote of quotes; let i = index">
-      <li  appHighlight> {{quote.id}} {{quote.thequote}}
+      <li  appHighlight> {{quote.id}}. {{quote.thequote}}
         <span class="text-info">
           Upvote  {{quote.upvotes}}
         </span> </li>
 
       <button (click)="toggleDetails(i)">Show Quote Details</button>
-      <app-quote-details *ngIf="quote.showAuthor"[quote]="quote"  ></app-quote-details>
+      <app-quote-details *ngIf="quote.showDescription"[quote]="quote" 
+        (isDone)="deleteQuote($event, i)">
+      </app-quote-details>
 
     </div>
 </div>
