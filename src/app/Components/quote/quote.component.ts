@@ -28,7 +28,25 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor
 
   }
-  VoteCount(index: number): void {}
+  //function to add a NEW quote
+
+ addNewQuote(quote){
+   let quoteLength = this.quotes.length;
+   quote.id = quoteLength + 1
+   this.quotes.push(quote)
+
+ }
+
+
+
+
+
+
+
+
+
+
+  // VoteCount(index: number): void {}
  
   // voteCount(i: number){
   //   let noVotes=0
