@@ -9,6 +9,7 @@ import { QuoteDetailsComponent } from './Components/quote-details/quote-details.
 import { HighlightDirective } from './highlight.directive';
 import { HeaderComponent } from './Components/header/header.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 
@@ -20,6 +21,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     HighlightDirective,
     HeaderComponent,
     QuoteFormComponent,
+    DateCountPipe,
   
   
   ],

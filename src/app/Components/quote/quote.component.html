@@ -13,14 +13,13 @@
   </div>
 </div>
 
-<!-- (clearQuote)="clickClear()" -->
 <div class="container">
     <div *ngFor="let quote of quotes; let i = index">
       <li  appHighlight> {{quote.id}}. {{quote.thequote}}
         <span class="text-info">
           Upvote  {{quote.upvotes}}
         </span> </li>
-
+        <p>posted on {{quote.completeDate|date}} </p>
       <button (click)="toggleDetails(i)">Show Quote Details</button>
       <app-quote-details *ngIf="quote.showDescription"[quote]="quote" 
         (isDone)="deleteQuote($event, i)">

@@ -10,7 +10,8 @@ export class Quotes {
     public author: string, 
     public person: string,
     public upvotes: number,
-    public downvotes: number
+    public downvotes: number,
+    public completeDate: Date
   ){
     this.showDescription =false
   
