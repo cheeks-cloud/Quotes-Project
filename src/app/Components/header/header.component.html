@@ -1,7 +1,11 @@
 <div class="header">
    <h1 class="text-center">Welcome to Quotes.Com</h1>
 
-   {{addQuote}}
+   <app-button
+    color="{{ showAddQuote ?'green':'black'  }}"
+    text="{{ showAddQuote ? 'Close':'Add Quote' }}"         >
+    (btnClick)="toggleAddQuote()"
+   </app-button>
 </div>
 
 

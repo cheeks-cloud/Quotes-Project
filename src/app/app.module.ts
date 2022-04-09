@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+ import  { FormsModule } from '@angular/forms';
 import { QuoteComponent} from './Components/quote/quote.component';
 import { QuoteDetailsComponent } from './Components/quote-details/quote-details.component';
 import { HighlightDirective } from './highlight.directive';
-import { HeaderComponent } from './Components/header/header.component'
+import { HeaderComponent } from './Components/header/header.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { ButtonComponent } from './components/button/button.component'
+
 
 
 @NgModule({
@@ -15,11 +19,15 @@ import { HeaderComponent } from './Components/header/header.component'
     QuoteComponent,
     QuoteDetailsComponent,
     HighlightDirective,
-    HeaderComponent
+    HeaderComponent,
+    QuoteFormComponent,
+    ButtonComponent
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
