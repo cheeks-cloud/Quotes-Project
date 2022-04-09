@@ -17,10 +17,6 @@ export class QuoteComponent implements OnInit {
     new Quotes( 6,"Depression Quote","Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad.","Henry Wadsworth","Agnes",0,0),
   ];
 
-  
-
-
-
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 export class Quotes {
   
-   showAuthor: boolean
+   showAuthor: boolean;  
    voting: boolean
 
   constructor(

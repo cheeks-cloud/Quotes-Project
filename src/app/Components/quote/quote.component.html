@@ -3,14 +3,13 @@
 </app-header> 
 <div class="container">
     <div *ngFor="let quote of quotes; let i = index">
-      <li  appHighlight> {{quote.thequote}} submitted by {{quote.person}} 
-        <span class="text-success">
+      <li  appHighlight> {{quote.id}} {{quote.thequote}}
+        <span class="text-info">
           Upvote  {{quote.upvotes}}
-      </span>  </li>
+        </span> </li>
 
       <button (click)="toggleDetails(i)">Show Quote Details</button>
-      <!-- <button (onclick)="voteCount(i)">VOTE</button> -->
-      <app-quote-details *ngIf="quote.showAuthor"  ></app-quote-details>
+      <app-quote-details *ngIf="quote.showAuthor"[quote]="quote"  ></app-quote-details>
 
     </div>
 </div>

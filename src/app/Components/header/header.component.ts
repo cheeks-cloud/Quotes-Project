@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, Output} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -8,15 +8,22 @@ import { Component, OnInit,Input, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
  
-  @Input() addQuote = "Add A Qoute"
-  // @Output()evennt = new EventEmitter()
+ //add propery values 
+
+ showAddQuote:boolean = false;
+
+
+
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
-// <button>Add A Qoute</button>
-  
+
+  toggleAddQuote(){
+    this.showAddQuote = ! this.showAddQuote;
+  }
 
 
 

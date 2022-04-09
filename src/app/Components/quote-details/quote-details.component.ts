@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 import { Quotes } from 'src/app/quotes'
 
 @Component({
@@ -7,7 +7,7 @@ import { Quotes } from 'src/app/quotes'
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-
+ @Input() quote: Quotes;
   constructor() { }
 
   ngOnInit(): void {
