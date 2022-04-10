@@ -6,8 +6,10 @@
   margin-top:20px;
   background-color:grey;
   color: black;
+  width: 60%;
 }
 .nav{
   display: flex;
   justify-content: center;
 }
+

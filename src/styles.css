@@ -12,3 +12,10 @@
 body{
   background-color:black; 
 }
+.buto{
+  padding: 10px;
+  margin-left: 10px;
+  border: 2px solid green;
+  background-color:black;
+  color: antiquewhite;
+}

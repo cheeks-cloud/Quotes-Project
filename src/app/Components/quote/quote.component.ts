@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Quotes} from 'src/app/quotes'
+import { Quotes} from 'src/app/quotes';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Quotes} from 'src/app/quotes'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quotes[]=[
-    new Quotes( 1, "Life Quote","The greatest glory in living lies not in never falling, but in rising every time we fall","Nelson Mandela","Gianna",0,0,new Date(2022,4,8)),
+    new Quotes( 1, "Life Quote","The greatest glory in living lies not in never falling, but in rising every time we fall.","Nelson Mandela","Gianna",0,0,new Date(2022,4,8)),
     new Quotes( 2,"Positive Quote","The most positive men are the most credulous.","Alexander Pope","Adriana",0,0,new Date(2022,7,4)),
     new Quotes( 3,"Inspiration Quote","Success is not final, failure is not fatal: it is the courage to continue that counts","Winston Churchill","Gloria",0,0,new Date(2022,5,9)),
     new Quotes( 4, "Life Quote","If life were predictable it would cease to be life, and be without flavor","Eleanor Roosevelt","Duke",0,0,new Date(2022,12,9)),
@@ -44,7 +44,8 @@ export class QuoteComponent implements OnInit {
 
  addNewQuote(quote){
    let quoteLength = this.quotes.length;
-   quote.id = quoteLength+ 1
+   quote.id = quoteLength+ 1;
+   quote.completeDate = new Date(quote.completeDate)
    this.quotes.push(quote)
 
  }

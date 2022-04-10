@@ -13,6 +13,8 @@ export class QuoteDetailsComponent implements OnInit {
 
 
  upvotes = 0
+ downvotes = 0
+
   constructor() { }
 
   ngOnInit(): void {
@@ -26,6 +28,12 @@ export class QuoteDetailsComponent implements OnInit {
 
   clickCount(): void{
     this.upvotes++
+    // this.upvotes--
   }
+  clickCounts(): void{
+    this.upvotes--
+    this.downvotes++
+  }
+  
 
 }

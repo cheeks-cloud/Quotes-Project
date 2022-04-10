@@ -23,17 +23,12 @@ showAddItem:boolean = false;
   ngOnInit(): void {
   }
 
-  // toggleAddQuote(){
-  //   this.showAddQuote = ! this.showAddQuote;
-  // }
-
+ 
 
 btnPressEvent = (str: string) => {
   this.btnPress.emit(str);
 }
-// onclick(){
-//   this.btnClick.emit()
-// }
+
 
 
 }

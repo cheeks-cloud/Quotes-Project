@@ -10,13 +10,16 @@ export class HighlightDirective {
   @HostListener('click')onclick(){
     this.textColor('Blue')
   }
+  
+ 
   @HostListener("dblclick") onDoubleClick(){
-    this.textColor('Red')
+    this.textColor('Red') 
   }
    
  
   private textColor(action:string){
-    this.elem.nativeElement.style.textColor = action
+    this.elem.nativeElement.style.color = action;
+    
   }
 
   
@@ -25,3 +28,7 @@ export class HighlightDirective {
 
 
 }
+
+
+
+
