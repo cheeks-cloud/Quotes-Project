@@ -13,6 +13,7 @@ import { DateCountPipe } from './date-count.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { DateCountPipe } from './date-count.pipe';
     HeaderComponent,
     QuoteFormComponent,
     DateCountPipe,
+   
   
   
   ],

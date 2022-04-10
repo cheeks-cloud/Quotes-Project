@@ -9,7 +9,10 @@ import { Quotes } from 'src/app/quotes'
 export class QuoteDetailsComponent implements OnInit {
  @Input() quote: Quotes;
  @Output() isDone = new EventEmitter<boolean>()
+ @Output() isclicked = new EventEmitter<boolean>()
 
+
+ upvotes = 0
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +21,11 @@ export class QuoteDetailsComponent implements OnInit {
   quoteDiscard(complete: boolean) {
     this.isDone.emit(complete)
 
+  }
+  
+
+  clickCount(): void{
+    this.upvotes++
   }
 
 }

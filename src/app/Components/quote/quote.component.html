@@ -6,38 +6,35 @@
 
 <div class="nav" *ngIf = "showAddItem">
   <div class="col-md-6" style="width: 80%;">
-    <app-quote-form (addQuote)="addNewQuote($event)"
-   >
-
+    <app-quote-form (addQuote)="addNewQuote($event)">
+  
     </app-quote-form>
   </div>
 </div>
 
-<div class="container">
-    <div *ngFor="let quote of quotes; let i = index">
-      <li  appHighlight> {{quote.id}}. {{quote.thequote}}
-        <span class="text-info">
-          Upvote  {{quote.upvotes}}
-        </span> </li>
-        <p>posted on {{quote.completeDate|date}} </p>
-      <button (click)="toggleDetails(i)">Show Quote Details</button>
+<div class="container-fluid">
+    <div  class="container"  *ngFor="let quote of quotes; let i = index">
+      <p > {{i+1}}. {{quote.thequote}}
+        <!--<span class="text-info"> it has  {{upvotes}} Upvotes </span> -->
+      </p>
+        <p> It was posted on {{quote.completeDate|date}},
+          Todate its <span class="text-info"> {{quote.completeDate | dateCount }} </span>  Days.</p>
+      <button class="btns"  (click)="toggleDetails(i)">Show Quote Details</button>
+    
+      
+      
       <app-quote-details *ngIf="quote.showDescription"[quote]="quote" 
         (isDone)="deleteQuote($event, i)">
+      
       </app-quote-details>
 
     </div>
 </div>
-<!-- [quote]="quote" 
-*ngIf="quote.id==highest && quote.upvotes>0";then highlight else empty 
-  for highlitig a specific part
-  <ng-template #highlight>
-    <li app-highlighy>  {{}}</li>
-  </ng-template>
-  <ng-template #empty>
-    <li app-highlighy>  {{}}</li>
-  </ng-template>
--->
 
+
+<!-- <span  >
+  Upvote  {{quote.upvotes}}
+</span>  -->
 
 
 

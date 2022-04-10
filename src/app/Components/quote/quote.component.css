@@ -1,8 +1,11 @@
 .container{
-  margin: 40px;
+  margin-left: 20%;
   padding: 20px;
   border: 2px  solid #000000;
-  box-shadow: 8px 8px 8px 8px aqua;
+  box-shadow: 4px 4px 4px 4px green;
+  margin-top:20px;
+  background-color:grey;
+  color: black;
 }
 .nav{
   display: flex;

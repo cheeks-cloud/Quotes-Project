@@ -1,11 +1,12 @@
 
 <div class="form">
   <h2 class="text-center"> Add A New Quote</h2>
-<form  (ngSubmit)="submitQuote()"#quoteform="ngForm">
+<form  (ngSubmit)="submitQuote(quoteform)" #quoteform="ngForm">
+
   <div class="form-group">
     <label for="text">Quote Category</label>
     <input type="text" name="category" placeholder="type goes here"
-    id="category"[(ngModel)]="newQuote.category" #category="ngModel" required >
+    id="category" ngModel  #category="ngModel" required >
     <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
      <p>Category is required</p>
     </div> 
@@ -14,7 +15,7 @@
   <div class="form-group">
     <label for="text">Quote</label>
     <input type="text" name="quote" placeholder="quote goes here"
-    id="text" [(ngModel)]="newQuote.thequote" #quote="ngModel" required >
+    id="text" ngModel #quote="ngModel" required >
     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
       <p>Quote is required</p>
      </div>  
@@ -23,7 +24,7 @@
   <div class="form-group">
     <label for="text">Author</label>
     <input type="text" name="author" id="author"
-    [(ngModel)]="newQuote.author" #author="ngModel"required >
+    ngModel  #author="ngModel"required >
     <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
       <p>Author is required</p>
      </div>  
@@ -32,15 +33,23 @@
   <div class="form-group">
     <label for="text">You Name</label>
     <input type="text" name="person" id="person"
-    [(ngModel)]="newQuote.person" #person="ngModel"required >
+    ngModel  #person="ngModel"required >
     <div [hidden]="person.valid || person.pristine" class="alert alert-danger">
       <p>Person is required</p>
      </div> 
   </div>
 
-  <button type="submit" value="Save Quote" class="btn btn-primary"> Add Quote</button>
-  <button class="btn btn-danger"(click)="clearBtn()" >Clear</button>
+  <div class="form-group">
+    <label for="complete">Posting Date </label>
+    <input type="date"id="complete" ngModel  name="completeDate" 
+    #completeDate = "ngModel"required>
+    <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+      <p>Date is Required</p>
+    </div>
+  </div>
+
+  <button type="submit" value="Save Quote" class="btns"> Add Quote</button>
+  
 
 </form>
 </div>
-<!-- (onclick) ='remove(true)' -->

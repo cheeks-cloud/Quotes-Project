@@ -3,5 +3,9 @@
 <p>This goal has: {{quote.downvotes}} Downvotes </p>
 <p>It was Submitted for Voting by {{quote.person}} </p>
 
- <button (click)="quoteDiscard(true)">Delete Quote</button>
+<button (click)="clickCount()">Click to Upvote</button>
+
+<p appHighlight> The Quote has <span class="text-info">{{upvotes}}</span> Upvotes </p>
+
+ <button class="btns" (click)="quoteDiscard(true)">Delete Quote</button>
 
