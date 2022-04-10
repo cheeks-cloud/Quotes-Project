@@ -6,10 +6,10 @@ import { Quotes } from 'src/app/quotes'
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
-  category: string;
-  author: string;
-  thequote: string;
-  person: string;
+  // category: string;
+  // author: string;
+  // thequote: string;
+  // person: string;
 
   newQuote = new Quotes(0,"","","","",0,0,new Date ());
   @Output() addQuote = new EventEmitter<Quotes>();
@@ -20,12 +20,15 @@ export class QuoteFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitQuote = (quoteform)=>{
 
-    this.addQuote.emit(this.newQuote);
-    quoteform.reset()
-     
-
+  submitQuote(newQuote,quoteform){
+    if(newQuote.name =='' || newQuote.author ==''){
+      return;
+    }else{
+      this.addQuote.emit(newQuote);
+      console.log(newQuote)
+      quoteform.reset()
+    }
   }
   
   

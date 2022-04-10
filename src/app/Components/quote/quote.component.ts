@@ -45,7 +45,7 @@ export class QuoteComponent implements OnInit {
  addNewQuote(quote){
    let quoteLength = this.quotes.length;
    quote.id = quoteLength+ 1;
-   quote.completeDate = new Date(quote.completeDate)
+  
    this.quotes.push(quote)
 
  }
@@ -62,13 +62,6 @@ deleteQuote(isDone,index){
   }
 }
 
-
-
-
-
-//you get the hishest
-// arr:numberss[]=this.quotes.map(quote=>quote.upvotes)
-// highest = math.max(...this.arr)
 
 
 }

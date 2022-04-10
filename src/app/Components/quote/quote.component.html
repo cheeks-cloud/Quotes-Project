@@ -14,15 +14,14 @@
 
 <div class="container-fluid">
     <div  class="container"  *ngFor="let quote of quotes; let i = index">
-      <p > {{i+1}}. {{quote.thequote}}
-        <!--<span class="text-info"> it has  {{upvotes}} Upvotes </span> -->
-      </p>
+      <p > {{i+1}}. Category <span class="text-info"> {{ quote.category }} </span> </p>
+      <p>Quote: {{ quote.thequote }}</p>
+      <p> It was Written by {{quote.author}} </p>
         <p> It was posted on {{quote.completeDate|date}},
           Todate its <span class="text-info"> {{quote.completeDate | dateCount }} </span>  Days.</p>
         <button class="btns"  (click)="toggleDetails(i)">Show Quote Details</button>
     
-      
-      
+   
       <app-quote-details *ngIf="quote.showDescription"[quote]="quote" 
         (isDone)="deleteQuote($event, i)">
       

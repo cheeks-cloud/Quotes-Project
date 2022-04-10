@@ -1,7 +1,7 @@
 
 <div class="form">
   <h2 class="text-center"> Add A New Quote</h2>
-<form  (ngSubmit)="submitQuote(quoteform)" #quoteform="ngForm">
+<form  (ngSubmit)="submitQuote(quoteform.value,quoteform)" #quoteform="ngForm">
 
   <div class="form-group">
     <label for="text">Quote Category</label>
@@ -14,9 +14,9 @@
 
   <div class="form-group">
     <label for="text">Quote</label>
-    <input type="text" name="quote" placeholder="quote goes here"
-    id="text" ngModel #quote="ngModel" required >
-    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+    <input type="text" name="thequote" placeholder="quote goes here"
+    id="text" ngModel #thequote="ngModel" required >
+    <div [hidden]="thequote.valid || thequote.pristine" class="alert alert-danger">
       <p>Quote is required</p>
      </div>  
   </div>
